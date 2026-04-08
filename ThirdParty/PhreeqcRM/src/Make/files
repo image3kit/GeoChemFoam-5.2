@@ -89,4 +89,4 @@ PhreeqcRM.cpp
 RM_interface_C.cpp
 RM_interface_F.cpp
 
-LIB= $(PHREEQCRM_LIBBIN)/libPhreeqcRM
+LIB=$(PHREEQCRM_LIBBIN)/libPhreeqcRM

@@ -48,7 +48,7 @@ bool Foam::steadyStateControl::criteriaSatisfied()
     bool achieved = true;
     bool checked = false;    // safety that some checks were indeed performed
 
-    const dictionary& solverDict = mesh_.solverPerformanceDict();
+    const dictionary& solverDict = mesh_.data().solverPerformanceDict();
     forAllConstIters(solverDict, iter)
     {
         const entry& solverPerfDictEntry = *iter;

@@ -129,8 +129,7 @@ void mapLagrangian(const meshToMesh0& meshToMesh0Interp)
             passiveParticleCloud targetParcels
             (
                 meshTarget,
-                cloudDir,
-                IDLList<passiveParticle>()
+                cloudDir
             );
 
             passiveParticle::trackingData td(targetParcels);
