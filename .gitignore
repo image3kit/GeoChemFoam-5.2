@@ -1,0 +1,18 @@
+# Build artifacts
+**/Make/linux64GccDPInt32Opt/
+**/lnInclude/
+*.out
+bin/
+lib/
+
+# Runs
+runs/
+
+# Logs
+logMakeGold.out
+logMake.out
+
+# OS
+.DS_Store
+Thumbs.db
+

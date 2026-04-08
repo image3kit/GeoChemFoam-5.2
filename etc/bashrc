@@ -1,7 +1,12 @@
 # .bashrc
 
+# cap parallel build number of processors
+_np=`nproc`
+export WM_NCOMPPROCS=$(( _np > 30 ? 30 : _np ))
+
 # Change according to your GeoChemFoam installation directory
-GCFOAM_DIR=$HOME/works/GeoChemFoam-5.2
+_upperDir=`cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd`
+GCFOAM_DIR=${GCFOAM_DIR:-${_upperDir}}
 GCFOAM_SRC=$GCFOAM_DIR/src
 GCFOAM_APPBIN=$GCFOAM_DIR/bin
 GCFOAM_LIBBIN=$GCFOAM_DIR/lib
@@ -11,7 +16,7 @@ GCFOAM_RUNS=$GCFOAM_DIR/runs
 
 # Change according to your openfoam installation directory
 export FOAM_INST_DIR=/usr/lib/openfoam
-source /usr/lib/openfoam/openfoam2212/etc/bashrc
+source /usr/lib/openfoam/openfoam2506/etc/bashrc
 #export FOAM_INST_DIR=$HOME/OpenFOAM
 #source $HOME/OpenFOAM/OpenFOAM-v2106/etc/bashrc
 #export FOAM_INST_DIR=/opt/OpenFOAM
